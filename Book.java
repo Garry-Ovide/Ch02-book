@@ -21,6 +21,20 @@ class Book
         author = bookAuthor;
         title = bookTitle;
     }
-
-    // Add the methods here ...
+    
+    /**
+     * Print the author
+     */
+    public void printAuthor()
+    {
+        System.out.println(author);
+    }
+    
+    /**
+     * Print the title
+     */
+    public void printTitle()
+    {
+        System.out.printl(title);
+    }
 }
