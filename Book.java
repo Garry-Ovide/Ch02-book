@@ -14,18 +14,20 @@ class Book
     private int pages;
     private String refNumber;
     private int borrowed;
+    private boolean courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int pages)
+    public Book(String bookAuthor, String bookTitle, int page, boolean courseText)
     {
         author = bookAuthor;
         title = bookTitle;
-        pages = pages;
+        pages = page;
         refNumber = "";
         borrowed = 0;
+        courseText = courseText;
     }
     
     /**
@@ -44,7 +46,7 @@ class Book
         System.out.println(title);
     }
     
-    /*
+    /**
      * Return the number of pages
      */
     public int getPages()
@@ -52,7 +54,7 @@ class Book
         return pages;
     }
     
-    /*
+    /**
      * Print details of the book. 
      * Print reference number if it has been set.
      * else print, print ZZZ
@@ -75,7 +77,7 @@ class Book
         System.out.println("Number of times Borrowed: " + borrowed);
     }
     
-    /*
+    /**
      * Set the reference number if it has
      * at least 3 characters
      */
@@ -92,7 +94,7 @@ class Book
         }
     }
     
-    /*
+    /**
      * Return the reference number
      */
     public String getRefeNumber()
@@ -100,7 +102,7 @@ class Book
         return refNumber;
     }
     
-    /*
+    /**
      * Increasing the borrowed count by 1 
      */
     public void borrow()
@@ -108,11 +110,20 @@ class Book
         borrowed = borrowed + 1;
     }
     
-    /*
-     * rturn the number of time a book has been borrowed
+    /**
+     * return the number of time a book has been borrowed
      */
     public int getBorrowed()
     {
         return borrowed;
     }
+    
+    /**
+     * Return whether the book is a course textbook.
+     */
+    public boolean isCourseText()
+    {
+        return courseText;
+    }
 }
+
