@@ -71,11 +71,19 @@ class Book
     }
     
     /*
-     * Set the reference number
+     * Set the reference number if it has
+     * at least 3 characters
      */
     public void setRefNumber(String ref)
     {
-        refNumber = ref;
+        //Check to see if the ref number has at least 3 characters
+        if (ref.length() >= 3) {
+            refNumber = ref;
+        }
+        else 
+        {
+            System.out.println("Error: reference number must be at least 3");
+        }
     }
     
     /*
