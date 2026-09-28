@@ -51,11 +51,23 @@ class Book
     }
     
     /*
-     * Print details of the book.
+     * Print details of the book. 
+     * Print reference number if it has been set.
+     * else print, print ZZZ
      */
     public void printDetails()
     {
         System.out.println("Title: " + title + ", Author: " + ", pages: " + pages);
+        
+        if (refNumber.length()>0)
+        {
+            System.out.println("Reference number: " + refNumber);
+        }
+        
+        else 
+        {
+            System.out.println("Reference number: ZZZ");
+        }
     }
     
     /*
